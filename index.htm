@@ -18,50 +18,51 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
 
   <!-- Eigenes CSS mit festem nachhaltigen Farbschema -->
-  html {
-  color-scheme: light; /* Erzwingt immer Light-Mode */
-}
+  <style>
+    html {
+      color-scheme: light; /* Erzwingt immer Light-Mode */
+    }
 
-:root {
-  --primary: #2e7d32;          
-  --primary-hover: #256428;    
-  --accent: #a5d6a7;           
+    :root {
+      --primary: #2e7d32;          /* Hauptfarbe: kräftiges Blattgrün */
+      --primary-hover: #256428;    /* Hover-Zustand */
+      --accent: #a5d6a7;           /* Akzentfarbe: helles Grün */
 
-  --background-color: #fdfdfd; 
-  --text-color: #1b1b1b;       
-  --muted-color: #5a5a5a;      
-}
+      --background-color: #e8f5e9; /* Sanftes Hellgrün als fester Hintergrund */
+      --text-color: #1b1b1b;       /* Haupttext */
+      --muted-color: #5a5a5a;      /* Sekundärtexte */
+    }
 
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  scroll-behavior: smooth;
-}
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+    }
 
-img {
-  width: 100%;
-  height: auto;
-}
+    img {
+      width: 100%;
+      height: auto;
+    }
 
-a {
-  color: var(--primary);
-}
+    a {
+      color: var(--primary);
+    }
 
-a:hover {
-  color: var(--primary-hover);
-}
+    a:hover {
+      color: var(--primary-hover);
+    }
 
-footer {
-  background-color: var(--accent);
-  padding: 1rem;
-  text-align: center;
-}
+    footer {
+      background-color: var(--accent);
+      padding: 1rem;
+      text-align: center;
+    }
 
-.result {
-  font-weight: bold;
-  margin-top: 1rem;
-}
-
+    .result {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -81,7 +82,7 @@ footer {
   <main class="container">
     <div class="grid">
 
-      <!-- Aufgabe 1: HTML-Grundstruktur (Überschriften, Absätze, Listen, Links) -->
+      <!-- Aufgabe 1: HTML-Grundstruktur -->
       <section id="einleitung">
         <hgroup>
           <h2>Nachhaltigkeit im Verkehr</h2>
@@ -102,7 +103,7 @@ footer {
         </p>
       </section>
 
-      <!-- Aufgabe 2: Medieninhalte (Bild & Video einfügen) -->
+      <!-- Aufgabe 2: Medieninhalte -->
       <section id="medien">
         <h3>Verkehr der Zukunft</h3>
         <figure>
@@ -117,7 +118,7 @@ footer {
                 frameborder="0" allowfullscreen></iframe>
       </section>
 
-      <!-- Aufgabe 11: CO₂-Rechner mit JavaScript -->
+      <!-- Aufgabe 11: CO₂-Rechner -->
       <section>
         <h3>CO₂-Rechner für deinen Arbeitsweg</h3>
         <p>Berechne, wie viel CO₂ du pro Woche verursachst – je nach Verkehrsmittel.</p>
@@ -141,7 +142,7 @@ footer {
     </div>
   </main>
 
-  <!-- Aufgabe 5: Kontaktformular mit Mailto-Funktion -->
+  <!-- Aufgabe 5: Kontaktformular -->
   <section aria-label="Kontaktformular" id="kontakt">
     <div class="container">
       <article>
@@ -174,7 +175,7 @@ footer {
        <strong>Kontakt:</strong> sop.bee@icloud.com</p>
   </section>
 
-  <!-- Aufgabe 11 (Fortsetzung): JavaScript für CO₂-Rechner & Mail -->
+  <!-- Aufgabe 11: JavaScript -->
   <script>
     function berechneCO2() {
       const km = parseFloat(document.getElementById("km").value);
