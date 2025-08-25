@@ -18,53 +18,50 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
 
   <!-- Eigenes CSS mit festem nachhaltigen Farbschema -->
-  <style>
-
-html {
-  color-scheme: light; /* erzwingt helles Schema */
+  html {
+  color-scheme: light; /* Erzwingt immer Light-Mode */
 }
 
+:root {
+  --primary: #2e7d32;          
+  --primary-hover: #256428;    
+  --accent: #a5d6a7;           
 
-    :root {
-      --primary: #2e7d32;          /* Hauptfarbe: kräftiges Blattgrün */
-      --primary-hover: #256428;    /* Hover-Zustand */
-      --accent: #a5d6a7;           /* Akzentfarbe: helles Grün */
+  --background-color: #fdfdfd; 
+  --text-color: #1b1b1b;       
+  --muted-color: #5a5a5a;      
+}
 
-      --background-color: #fdfdfd; /* Hintergrund */
-      --text-color: #1b1b1b;       /* Haupttext */
-      --muted-color: #5a5a5a;      /* Sekundärtexte */
-    }
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
 
-    body {
-      background-color: var(--background-color);
-      color: var(--text-color);
-      scroll-behavior: smooth;
-    }
+img {
+  width: 100%;
+  height: auto;
+}
 
-    img {
-      width: 100%;
-      height: auto;
-    }
+a {
+  color: var(--primary);
+}
 
-    a {
-      color: var(--primary);
-    }
+a:hover {
+  color: var(--primary-hover);
+}
 
-    a:hover {
-      color: var(--primary-hover);
-    }
+footer {
+  background-color: var(--accent);
+  padding: 1rem;
+  text-align: center;
+}
 
-    footer {
-      background-color: var(--accent);
-      padding: 1rem;
-      text-align: center;
-    }
+.result {
+  font-weight: bold;
+  margin-top: 1rem;
+}
 
-    .result {
-      font-weight: bold;
-      margin-top: 1rem;
-    }
-  </style>
 </head>
 <body>
 
