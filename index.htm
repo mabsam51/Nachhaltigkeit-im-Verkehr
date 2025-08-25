@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Aufgabe 7: Meta-Tags für SEO -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Webseite zum Thema Nachhaltigkeit im Verkehr – Informationen, Tipps, CO₂-Rechner und mehr." />
+  <meta name="keywords" content="Nachhaltigkeit, Verkehr, Mobilität, Klimaschutz, CO2-Rechner, Umwelt, Fahrrad, Bus, Bahn, E-Mobilität, Verkehrswende" />
+  <meta name="author" content="Sophia Beermann, BBS Cuxhaven" />
+   <!-- Indexierung durch Suchmaschinen unerdrückt -->
+   <!-- meta name="robots" content="index, follow" -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Nachhaltigkeit im Verkehr</title>
+
+  <!-- Aufgabe 9: Favicon im Root-Verzeichnis -->
+  <link rel="icon" href="favicon.png" type="image/png" />
+
+  <!-- Aufgabe 4: CSS-Framework einbinden -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+  <!-- Aufgabe 4: Eigenes CSS -->
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    .result {
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Aufgabe 3: Navigation mit internen Ankerlinks -->
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>Nachhaltiger Verkehr</strong></li>
+    </ul>
+    <ul>
+      <li><a href="#einleitung">Einleitung</a></li>
+      <li><a href="#medien">Video & Bild</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+      <li><a href="#impressum">Impressum</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <div class="grid">
+
+      <!-- Aufgabe 1: HTML-Grundstruktur (Überschriften, Absätze, Listen, Links) -->
+      <section id="einleitung">
+        <hgroup>
+          <h2>Nachhaltigkeit im Verkehr</h2>
+          <h3>Wie umweltfreundliche Mobilität unsere Zukunft sichert</h3>
+        </hgroup>
+        <p>Der Verkehrssektor trägt in hohem Maße zu den globalen CO₂-Emissionen bei. Nachhaltiger Verkehr bedeutet, umweltfreundliche Fortbewegungsmittel zu fördern und Emissionen zu reduzieren. Diese Webseite zeigt Möglichkeiten auf, wie jede*r zur Verkehrswende beitragen kann.</p>
+
+        <h3>Schlüsselthemen</h3>
+        <ul>
+          <li>Umweltfreundliche Verkehrsmittel</li>
+          <li>CO₂-Einsparung im Alltag</li>
+          <li>Politische Maßnahmen & Innovationen</li>
+        </ul>
+        <p>Mehr erfahren bei 
+          <a href="https://www.umweltbundesamt.de/themen/verkehr-laerm/nachhaltige-mobilitaet" target="_blank">
+            Umweltbundesamt
+          </a>
+        </p>
+      </section>
+
+      <!-- Aufgabe 2: Medieninhalte (Bild & Video einfügen) -->
+      <section id="medien">
+        <h3>Verkehr der Zukunft</h3>
+        <figure>
+          <img src="assets/img/future_traffic.png" alt="Nachhaltiger Verkehr – Zukunftsvision" />
+          <figcaption>Bildquelle: eigenes Projektbild</figcaption>
+        </figure>
+
+        <h3>Video: Nachhaltige Mobilität</h3>
+        <p>Ein Blick auf moderne Lösungen im Verkehrssystem:</p>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/UiR7y5Hs7HE"
+                title="YouTube Video – Nachhaltigkeit im Verkehr"
+                frameborder="0" allowfullscreen></iframe>
+      </section>
+
+      <!-- Aufgabe 11: CO₂-Rechner mit JavaScript -->
+      <section>
+        <h3>CO₂-Rechner für deinen Arbeitsweg</h3>
+        <p>Berechne, wie viel CO₂ du pro Woche verursachst – je nach Verkehrsmittel.</p>
+        <form onsubmit="event.preventDefault(); berechneCO2();">
+          <input type="number" id="km" placeholder="Strecke in km (einfach)" required />
+          <select id="verkehrsmittel">
+            <option value="auto_benzin">Auto (Benzin)</option>
+            <option value="auto_diesel">Auto (Diesel)</option>
+            <option value="bus">Bus</option>
+            <option value="zug">Zug</option>
+            <option value="motorrad">Motorrad</option>
+            <option value="motorroller">Motorroller</option>
+            <option value="ebike">E-Bike</option>
+            <option value="eroller">E-Roller</option>
+            <option value="fahrrad">Fahrrad</option>
+          </select>
+          <button type="submit">CO₂ berechnen</button>
+        </form>
+        <p class="result" id="co2Ergebnis"></p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Aufgabe 5: Kontaktformular mit Mailto-Funktion -->
+  <section aria-label="Kontaktformular" id="kontakt">
+    <div class="container">
+      <article>
+        <hgroup>
+          <h2>Kontakt</h2>
+          <h3>Fragen oder Feedback?</h3>
+        </hgroup>
+        <form class="grid" onsubmit="sendeEmail(); return false;">
+          <input type="text" id="firstname" name="firstname" placeholder="Dein Name" aria-label="Name" required />
+          <input type="email" id="email" name="email" placeholder="Deine E-Mail" aria-label="Email" required />
+          <input type="text" id="betreff" name="betreff" placeholder="Betreff" aria-label="Betreff" required />
+          <textarea id="nachricht" name="nachricht" placeholder="Deine Nachricht" aria-label="Nachricht" required></textarea>
+          <button type="submit">E-Mail schreiben</button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <!-- Aufgabe 10: Impressum -->
+  <footer class="container">
+    <small>
+      <a href="#einleitung">Zurück zum Anfang</a>
+    </small>
+  </footer>
+
+  <section id="impressum" class="container">
+    <h2>Impressum</h2>
+    <p><strong>Name:</strong> Sophia Beermann<br>
+       <strong>Schule:</strong> BBS Cuxhaven<br>
+       <strong>Kontakt:</strong> sop.bee@icloud.com</p>
+  </section>
+
+  <!-- Aufgabe 11 (Fortsetzung): JavaScript für CO₂-Rechner & Mail -->
+  <script>
+    function berechneCO2() {
+      const km = parseFloat(document.getElementById("km").value);
+      const mittel = document.getElementById("verkehrsmittel").value;
+      let emission;
+
+      switch (mittel) {
+        case "auto_benzin": emission = km * 2 * 0.192; break;
+        case "auto_diesel": emission = km * 2 * 0.171; break;
+        case "bus": emission = km * 2 * 0.105; break;
+        case "zug": emission = km * 2 * 0.041; break;
+        case "motorrad": emission = km * 2 * 0.103; break;
+        case "motorroller": emission = km * 2 * 0.075; break;
+        case "ebike": emission = km * 2 * 0.012; break;
+        case "eroller": emission = km * 2 * 0.020; break;
+        case "fahrrad": emission = 0; break;
+        default: emission = 0;
+      }
+
+      const ergebnis = document.getElementById("co2Ergebnis");
+      ergebnis.textContent = "Dein CO₂-Ausstoß pro Woche beträgt ca. " + emission.toFixed(2) + " kg.";
+    }
+
+    function sendeEmail() {
+      const name = document.getElementById("firstname").value;
+      const email = document.getElementById("email").value;
+      const betreff = document.getElementById("betreff").value;
+      const nachricht = document.getElementById("nachricht").value;
+
+      const bodyText =
+        "Name: " + name + "\n\n" +
+        "E-Mail: " + email + "\n\n" +
+        "Nachricht:\n" + nachricht;
+
+      const mailto = `mailto:sop.bee@icloud.com?subject=${encodeURIComponent(betreff)}&body=${encodeURIComponent(bodyText)}`;
+      window.location.href = mailto;
+    }
+  </script>
+
+</body>
+</html>
