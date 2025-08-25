@@ -4,8 +4,8 @@
   <!-- Aufgabe 7: Meta-Tags für SEO -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Webseite zum Thema Nachhaltigkeit im Verkehr – Informationen, Tipps, CO₂-Rechner und mehr." />
-  <meta name="keywords" content="Nachhaltigkeit, Verkehr, Mobilität, Klimaschutz, CO2-Rechner, Umwelt, Fahrrad, Bus, Bahn, E-Mobilität, Verkehrswende" />
+  <meta name="description" content="Webseite zum Thema Nachhaltigkeit im Verkehr – Informationen, Tipps, CO₂-Rechner für den Schulweg und mehr." />
+  <meta name="keywords" content="Nachhaltigkeit, Verkehr, Mobilität, Klimaschutz, CO2-Rechner, Umwelt, Fahrrad, Bus, Bahn, E-Mobilität, Verkehrswende, Schule" />
   <meta name="author" content="Sophia Beermann, BBS Cuxhaven" />
   <!-- Indexierung durch Suchmaschinen unterdrückt -->
   <meta name="robots" content="noindex, nofollow" />
@@ -73,90 +73,89 @@
     </ul>
     <ul>
       <li><a href="#einleitung">Einleitung</a></li>
-      <li><a href="#medien">Video & Bild</a></li>
+      <li><a href="#themen">Schlüsselthemen</a></li>
+      <li><a href="#medien">Medien</a></li>
+      <li><a href="#rechner">CO₂-Rechner</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
       <li><a href="#impressum">Impressum</a></li>
     </ul>
   </nav>
 
   <main class="container">
-    <div class="grid">
 
-      <!-- Aufgabe 1: HTML-Grundstruktur -->
+    <!-- Abschnitt 1: Einleitung & Schlüsselthemen nebeneinander -->
+    <div class="grid">
       <section id="einleitung">
         <hgroup>
           <h2>Nachhaltigkeit im Verkehr</h2>
           <h3>Wie umweltfreundliche Mobilität unsere Zukunft sichert</h3>
         </hgroup>
         <p>Der Verkehrssektor trägt in hohem Maße zu den globalen CO₂-Emissionen bei. Nachhaltiger Verkehr bedeutet, umweltfreundliche Fortbewegungsmittel zu fördern und Emissionen zu reduzieren. Diese Webseite zeigt Möglichkeiten auf, wie jede*r zur Verkehrswende beitragen kann.</p>
+      </section>
 
+      <section id="themen">
         <h3>Schlüsselthemen</h3>
         <ul>
           <li>Umweltfreundliche Verkehrsmittel</li>
           <li>CO₂-Einsparung im Alltag</li>
           <li>Politische Maßnahmen & Innovationen</li>
         </ul>
-        <p>Mehr erfahren bei 
-          <a href="https://www.umweltbundesamt.de/themen/verkehr-laerm/nachhaltige-mobilitaet" target="_blank">
-            Umweltbundesamt
-          </a>
+        <p>Mehr erfahren beim 
+          <a href="https://www.umweltbundesamt.de/themen/verkehr-laerm/nachhaltige-mobilitaet" target="_blank">Umweltbundesamt</a>
         </p>
       </section>
+    </div>
 
-      <!-- Aufgabe 2: Medieninhalte -->
-      <section id="medien">
+    <!-- Abschnitt 2: Bild & Video nebeneinander -->
+    <div class="grid" id="medien">
+      <section>
         <h3>Verkehr der Zukunft</h3>
         <figure>
           <img src="assets/img/future_traffic.png" alt="Nachhaltiger Verkehr – Zukunftsvision" />
           <figcaption>Bildquelle: eigenes Projektbild</figcaption>
         </figure>
-
-        <!-- Zweites Bild: Schifffahrt -->
         <figure>
           <img src="assets/img/schifffahrt.png" alt="Nachhaltige Schifffahrt – Zukunft der maritimen Mobilität" />
           <figcaption>Bildquelle: eigenes Projektbild</figcaption>
         </figure>
+      </section>
 
+      <section>
         <h3>Video: Nachhaltige Mobilität</h3>
         <p>Ein Blick auf moderne Lösungen im Verkehrssystem:</p>
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/UiR7y5Hs7HE"
                 title="YouTube Video – Nachhaltigkeit im Verkehr"
                 frameborder="0" allowfullscreen></iframe>
       </section>
-
-      <!-- Aufgabe 11: CO₂-Rechner -->
-      <section>
-        <h3>CO₂-Rechner für deinen Arbeitsweg</h3>
-        <p>Berechne, wie viel CO₂ du pro Woche verursachst – je nach Verkehrsmittel.</p>
-        <form onsubmit="event.preventDefault(); berechneCO2();">
-          <input type="number" id="km" placeholder="Strecke in km (einfach)" required />
-          <select id="verkehrsmittel">
-            <option value="auto_benzin">Auto (Benzin)</option>
-            <option value="auto_diesel">Auto (Diesel)</option>
-            <option value="bus">Bus</option>
-            <option value="zug">Zug</option>
-            <option value="motorrad">Motorrad</option>
-            <option value="motorroller">Motorroller</option>
-            <option value="ebike">E-Bike</option>
-            <option value="eroller">E-Roller</option>
-            <option value="fahrrad">Fahrrad</option>
-          </select>
-          <button type="submit">CO₂ berechnen</button>
-        </form>
-        <p class="result" id="co2Ergebnis"></p>
-      </section>
-
-      <!-- NEU: Quellenangabe für CO₂-Rechner -->
-      <section>
-        <h3>Quellenangabe</h3>
-        <p>
-          Die Berechnungen des CO₂-Rechners basieren auf Durchschnittswerten des 
-          <a href="https://www.umweltbundesamt.de/themen/verkehr-laerm/emissionen-des-verkehrs/treibhausgas-emissionen-des-verkehrs" target="_blank">
-            Umweltbundesamts (UBA)
-          </a> (Stand: 2023).
-        </p>
-      </section>
     </div>
+
+    <!-- Abschnitt 3: CO₂-Rechner -->
+    <section id="rechner">
+      <h3>CO₂-Rechner für deinen Schulweg</h3>
+      <p>Berechne, wie viel CO₂ du pro Woche auf deinem Schulweg verursachst – je nach Verkehrsmittel.</p>
+      <form onsubmit="event.preventDefault(); berechneCO2();">
+        <input type="number" id="km" placeholder="Strecke in km (einfach)" required />
+        <select id="verkehrsmittel">
+          <option value="auto_benzin">Auto (Benzin)</option>
+          <option value="auto_diesel">Auto (Diesel)</option>
+          <option value="bus">Bus</option>
+          <option value="zug">Zug</option>
+          <option value="motorrad">Motorrad</option>
+          <option value="motorroller">Motorroller</option>
+          <option value="ebike">E-Bike</option>
+          <option value="eroller">E-Roller</option>
+          <option value="fahrrad">Fahrrad</option>
+        </select>
+        <button type="submit">CO₂ berechnen</button>
+      </form>
+      <p class="result" id="co2Ergebnis"></p>
+      <small>
+        Quelle: 
+        <a href="https://www.umweltbundesamt.de/themen/verkehr-laerm/emissionen-des-verkehrs/treibhausgas-emissionen-des-verkehrs" 
+           target="_blank">Umweltbundesamt (UBA), 2023</a>
+      </small>
+    </section>
+
   </main>
 
   <!-- Aufgabe 5: Kontaktformular -->
@@ -213,7 +212,7 @@
       }
 
       const ergebnis = document.getElementById("co2Ergebnis");
-      ergebnis.textContent = "Dein CO₂-Ausstoß pro Woche beträgt ca. " + emission.toFixed(2) + " kg.";
+      ergebnis.textContent = "Dein CO₂-Ausstoß pro Woche auf dem Schulweg beträgt ca. " + emission.toFixed(2) + " kg.";
     }
 
     function sendeEmail() {
